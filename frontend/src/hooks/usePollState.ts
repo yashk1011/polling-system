@@ -40,7 +40,7 @@ export const usePollState = ({ studentName }: UsePollStateProps = {}) => {
     }
   }, [studentName]);
 
-  // Fetch active poll on mount (state recovery)
+
   useEffect(() => {
     fetchActivePoll();
   }, [fetchActivePoll]);

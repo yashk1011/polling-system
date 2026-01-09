@@ -45,7 +45,7 @@ const PollSchema: Schema = new Schema({
   },
 });
 
-// Index for faster queries
+
 PollSchema.index({ status: 1, startedAt: -1 });
 
 export default mongoose.model<IPollDocument>('Poll', PollSchema);

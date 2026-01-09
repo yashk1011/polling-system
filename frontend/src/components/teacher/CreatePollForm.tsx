@@ -47,7 +47,7 @@ export const CreatePollForm: React.FC<CreatePollFormProps> = ({ onCreatePoll, is
 
     onCreatePoll(question.trim(), options, correctOptionIndex, timerDuration);
 
-    // Reset defaults
+
     setQuestion('');
     setOptions(['', '']);
     setCorrectOptionIndex(0);
@@ -137,10 +137,7 @@ export const CreatePollForm: React.FC<CreatePollFormProps> = ({ onCreatePoll, is
                       type="radio"
                       name="correctOption"
                       checked={correctOptionIndex !== index}
-                      onChange={() => setCorrectOptionIndex(index)} // Clicking 'No' on another shouldn't do anything, but selecting Yes on this row sets it. 
-                      // Actually, let's just make the Yes button set it. The No button is just visual state for "not selected".
-                      // For simplicity, we only bind the change on the Yes radio, or just make it purely visual.
-                      // Let's assume the user clicks "Yes" to select.
+                      onChange={() => setCorrectOptionIndex(index)}
                       disabled={isDisabled}
                     />
                     <span className="radio-fake"></span>
@@ -170,7 +167,6 @@ export const CreatePollForm: React.FC<CreatePollFormProps> = ({ onCreatePoll, is
         )}
 
         <div className="form-footer">
-          {/* Spacer */}
           <div />
           <button type="submit" className="btn-ask" disabled={isDisabled}>
             {isDisabled ? 'Poll Active' : 'Ask Question'}

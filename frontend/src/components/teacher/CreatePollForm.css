@@ -38,7 +38,7 @@
   z-index: 1;
 }
 
-/* Optional underlining for "Get Started" if needed? Image doesn't show clearly, looks plain text. */
+
 
 .subtext {
   color: #666;
@@ -47,7 +47,7 @@
   max-width: 500px;
 }
 
-/* Form Styles */
+
 .poll-form {
   display: flex;
   flex-direction: column;
@@ -68,10 +68,10 @@
 }
 
 .section-label.right {
-  margin-right: 120px; /* Align with yes/no toggle visual */
+  margin-right: 120px; 
 }
 
-/* Timer Select */
+
 .timer-select-wrapper {
   position: relative;
 }
@@ -91,7 +91,7 @@
   background-position: right 12px center;
 }
 
-/* Question Input */
+
 .input-wrapper {
   position: relative;
 }
@@ -105,7 +105,7 @@
   font-size: 16px;
   color: #111;
   outline: none;
-  resize: vertical; /* or none to lock height */
+  resize: vertical; 
   min-height: 120px;
   transition: border-color 0.2s;
 }
@@ -123,7 +123,7 @@
   color: #888;
 }
 
-/* Options List */
+
 .options-list {
   display: flex;
   flex-direction: column;
@@ -157,7 +157,7 @@
 .option-text-input {
   width: 100%;
   background: #F3F4F6;
-  border: 1px solid transparent; /* Match structure of question */
+  border: 1px solid transparent; 
   border-radius: 8px;
   padding: 12px 16px;
   font-size: 14px;
@@ -171,7 +171,7 @@
   background: #fff;
 }
 
-/* Correct Toggle - Custom Radio */
+
 .correct-toggle {
   display: flex;
   gap: 24px;
@@ -200,7 +200,7 @@
   display: block;
 }
 
-/* Selected state (Purple filled) */
+
 .radio-label.selected .radio-fake {
   border-color: #6D5DE6;
   background: #6D5DE6;
@@ -224,7 +224,7 @@
   font-weight: 500;
 }
 
-/* Add More Button */
+
 .btn-add-more {
   margin-top: 16px;
   padding: 10px 20px;
@@ -243,7 +243,7 @@
   background: #F0EEFF;
 }
 
-/* Footer */
+
 .form-footer {
   display: flex;
   justify-content: flex-end;

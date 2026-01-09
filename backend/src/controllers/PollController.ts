@@ -2,14 +2,12 @@ import { Request, Response } from 'express';
 import PollService from '../services/PollService';
 
 class PollController {
-  /**
-   * Create a new poll (Teacher only)
-   */
+  
   async createPoll(req: Request, res: Response): Promise<void> {
     try {
       const { question, options, timerDuration, correctOptionIndex } = req.body;
 
-      // Validation
+
       if (!question || !options || !timerDuration) {
         res.status(400).json({ error: 'Missing required fields' });
         return;
@@ -38,9 +36,7 @@ class PollController {
     }
   }
 
-  /**
-   * Get active poll with remaining time
-   */
+  
   async getActivePoll(req: Request, res: Response): Promise<void> {
     try {
       const { studentName } = req.query;
@@ -57,9 +53,7 @@ class PollController {
     }
   }
 
-  /**
-   * Get poll results
-   */
+  
   async getPollResults(req: Request, res: Response): Promise<void> {
     try {
       const { pollId } = req.params;
@@ -70,9 +64,7 @@ class PollController {
     }
   }
 
-  /**
-   * Get poll history (Teacher only)
-   */
+  
   async getPollHistory(req: Request, res: Response): Promise<void> {
     try {
       const history = await PollService.getPollHistory();
@@ -82,9 +74,7 @@ class PollController {
     }
   }
 
-  /**
-   * End a poll (Teacher only)
-   */
+  
   async endPoll(req: Request, res: Response): Promise<void> {
     try {
       const { pollId } = req.params;

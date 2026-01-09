@@ -11,9 +11,7 @@ const api = axios.create({
 });
 
 export const pollApi = {
-  /**
-   * Get the active poll
-   */
+  
   getActivePoll: async (studentName?: string): Promise<ActivePollResponse | null> => {
     try {
       const params = studentName ? { studentName } : {};
@@ -27,18 +25,13 @@ export const pollApi = {
     }
   },
 
-  /**
-   * Get poll history (Teacher only)
-   */
+  
   getPollHistory: async (): Promise<PollHistoryItem[]> => {
     const response = await api.get('/polls/history');
     return response.data.history;
   },
 
-  /**
-   * Create a new poll (Teacher only)
-   * Note: sockets are used for the main flow; this REST helper is kept for completeness.
-   */
+  
   createPoll: async (
     question: string,
     options: string[],
@@ -54,9 +47,7 @@ export const pollApi = {
     return response.data.poll;
   },
 
-  /**
-   * End a poll (Teacher only)
-   */
+  
   endPoll: async (pollId: string) => {
     const response = await api.post(`/polls/${pollId}/end`);
     return response.data;

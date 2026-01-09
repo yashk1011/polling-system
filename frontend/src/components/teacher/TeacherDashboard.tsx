@@ -17,14 +17,14 @@ export const TeacherDashboard: React.FC = () => {
   const [students, setStudents] = useState<{ id: string; name: string }[]>([]);
 
   useEffect(() => {
-    // Identify this socket as the teacher for chat and presence
+
     if (isConnected) {
       emit('identify', { name: 'Teacher', role: 'teacher' });
     }
   }, [isConnected, emit]);
 
   useEffect(() => {
-    // Listen for poll events
+
     const handlePollStarted = (data: any) => {
       updatePoll(data.poll, data.remainingTime);
       setNotification('Poll started successfully!');

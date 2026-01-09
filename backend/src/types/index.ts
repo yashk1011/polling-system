@@ -1,5 +1,5 @@
 export interface IPoll {
-  // MongoDB-generated identifier is provided by Mongoose's Document type
+
   question: string;
   options: string[];
   correctOptionIndex: number;
@@ -10,7 +10,7 @@ export interface IPoll {
 }
 
 export interface IVote {
-  // MongoDB-generated identifier is provided by Mongoose's Document type
+
   pollId: string;
   studentName: string;
   selectedOption: number;

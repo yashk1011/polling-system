@@ -15,7 +15,7 @@ export const StudentView: React.FC = () => {
   const { activePoll, results, remainingTime, hasVoted, updatePoll, updateResults, markAsVoted, clearPoll } =
     usePollState({ studentName: studentName || undefined });
 
-  // Load student name from sessionStorage (unique per tab)
+
   useEffect(() => {
     const savedName = sessionStorage.getItem('studentName');
     if (savedName) {
@@ -23,7 +23,7 @@ export const StudentView: React.FC = () => {
     }
   }, []);
 
-  // Identify and join poll when name is set
+
   useEffect(() => {
     if (studentName && isConnected) {
       emit('identify', { name: studentName, role: 'student' });
@@ -32,7 +32,7 @@ export const StudentView: React.FC = () => {
   }, [studentName, isConnected, emit]);
 
   useEffect(() => {
-    // Listen for poll events
+
     const handlePollStarted = (data: any) => {
       updatePoll(data.poll, data.remainingTime || data.poll.timerDuration);
       if (data.hasVoted) {
@@ -48,7 +48,7 @@ export const StudentView: React.FC = () => {
       updateResults(data.results);
       setTimeout(() => {
         clearPoll();
-      }, 5000); // Show results for 5 seconds before clearing
+      }, 5000);
     };
 
     const handleVoteRecorded = () => {
@@ -99,7 +99,7 @@ export const StudentView: React.FC = () => {
     });
   };
 
-  // Show onboarding if no name
+
   if (!studentName) {
     return <StudentOnboarding onSubmit={handleNameSubmit} />;
   }

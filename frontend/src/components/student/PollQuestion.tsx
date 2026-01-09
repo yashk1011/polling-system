@@ -22,7 +22,7 @@ export const PollQuestion: React.FC<PollQuestionProps> = ({
   const { formattedTime } = usePollTimer({
     initialTime: remainingTime,
     onTimeout: () => {
-      // Timer expired - student can't vote anymore
+
     },
   });
 
@@ -33,7 +33,7 @@ export const PollQuestion: React.FC<PollQuestionProps> = ({
 
     setIsSubmitting(true);
     onSubmitVote(selectedOption);
-    // isSubmitting will stay true to prevent re-submission
+
   };
 
   if (hasVoted) {

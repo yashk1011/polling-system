@@ -11,7 +11,7 @@ export const usePollTimer = ({ initialTime, onTimeout }: UsePollTimerProps) => {
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    // Reset timer when initialTime changes
+
     setTimeRemaining(initialTime);
     setIsActive(true);
   }, [initialTime]);

@@ -3,8 +3,7 @@
   width: 100%;
   margin: 0 auto;
   font-family: 'Inter', sans-serif;
-  /* If wrapped in a card elsewhere, we might not need bg white here. 
-     But let's assume it stands alone or inside a layout. */
+  
   background: transparent;
 }
 

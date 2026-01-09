@@ -25,10 +25,10 @@ const VoteSchema: Schema = new Schema({
   },
 });
 
-// Compound unique index to prevent duplicate votes (race condition prevention)
+
 VoteSchema.index({ pollId: 1, studentName: 1 }, { unique: true });
 
-// Index for faster aggregation queries
+
 VoteSchema.index({ pollId: 1, selectedOption: 1 });
 
 export default mongoose.model<IVoteDocument>('Vote', VoteSchema);
