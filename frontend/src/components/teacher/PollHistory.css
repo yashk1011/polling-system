@@ -1,0 +1,78 @@
+.poll-history h2 {
+  color: #333;
+  margin-bottom: 24px;
+  font-size: 22px;
+}
+
+.poll-history p {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+}
+
+.poll-history .error {
+  color: #f44336;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-item {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.history-header h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.history-date {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.history-results {
+  margin-top: 12px;
+}
+
+.history-results .total-votes {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.history-result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.history-result-row:last-child {
+  border-bottom: none;
+}
+
+.history-result-row .option {
+  font-weight: 600;
+  color: #333;
+}
+
+.history-result-row .percentage {
+  color: #667eea;
+  font-weight: 700;
+}
+
+.history-result-row .count {
+  color: #888;
+  font-size: 13px;
+}

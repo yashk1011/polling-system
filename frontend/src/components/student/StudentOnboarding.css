@@ -1,0 +1,81 @@
+.student-onboarding {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.onboarding-card {
+  background: white;
+  border-radius: 16px;
+  padding: 50px 60px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+}
+
+.onboarding-card h1 {
+  color: #667eea;
+  font-size: 32px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.onboarding-card > p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.onboarding-card form {
+  text-align: left;
+}
+
+.onboarding-card .form-group {
+  margin-bottom: 20px;
+}
+
+.onboarding-card input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.onboarding-card input:focus {
+  border-color: #667eea;
+}
+
+.onboarding-card .error {
+  color: #f44336;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.btn-join {
+  width: 100%;
+  background: #667eea;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.btn-join:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 600px) {
+  .onboarding-card {
+    padding: 40px 30px;
+  }
+}

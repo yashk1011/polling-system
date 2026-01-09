@@ -1,0 +1,295 @@
+.create-poll-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.page-header {
+  margin-bottom: 40px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #6D5DE6;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.pill-icon {
+  font-size: 10px;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 12px;
+}
+
+.page-header .highlight {
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional underlining for "Get Started" if needed? Image doesn't show clearly, looks plain text. */
+
+.subtext {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+/* Form Styles */
+.poll-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-label {
+  font-weight: 700;
+  font-size: 16px;
+  color: #111;
+}
+
+.section-label.right {
+  margin-right: 120px; /* Align with yes/no toggle visual */
+}
+
+/* Timer Select */
+.timer-select-wrapper {
+  position: relative;
+}
+
+.timer-select {
+  appearance: none;
+  background-color: #F3F4F6;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 32px 8px 16px;
+  font-size: 14px;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%236D5DE6%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+/* Question Input */
+.input-wrapper {
+  position: relative;
+}
+
+.question-input {
+  width: 100%;
+  background: #F3F4F6;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 16px;
+  color: #111;
+  outline: none;
+  resize: vertical; /* or none to lock height */
+  min-height: 120px;
+  transition: border-color 0.2s;
+}
+
+.question-input:focus {
+  border-color: #6D5DE6;
+  background: #fff;
+}
+
+.char-count {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* Options List */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.option-number-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #6D5DE6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.option-input-wrapper {
+  flex: 1;
+}
+
+.option-text-input {
+  width: 100%;
+  background: #F3F4F6;
+  border: 1px solid transparent; /* Match structure of question */
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #111;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.option-text-input:focus {
+  border-color: #6D5DE6;
+  background: #fff;
+}
+
+/* Correct Toggle - Custom Radio */
+.correct-toggle {
+  display: flex;
+  gap: 24px;
+  min-width: 150px;
+  justify-content: flex-start;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-label input {
+  display: none;
+}
+
+.radio-fake {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  position: relative;
+  display: block;
+}
+
+/* Selected state (Purple filled) */
+.radio-label.selected .radio-fake {
+  border-color: #6D5DE6;
+  background: #6D5DE6;
+}
+
+.radio-label.selected .radio-fake::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.label-text {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Add More Button */
+.btn-add-more {
+  margin-top: 16px;
+  padding: 10px 20px;
+  border: 1px solid #6D5DE6;
+  color: #6D5DE6;
+  background: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  align-self: flex-start;
+}
+
+.btn-add-more:hover {
+  background: #F0EEFF;
+}
+
+/* Footer */
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #eee;
+  padding-top: 24px;
+}
+
+.btn-ask {
+  background: #6D5DE6;
+  color: #fff;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(109, 93, 230, 0.3);
+  transition: transform 0.1s;
+}
+
+.btn-ask:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(109, 93, 230, 0.35);
+}
+
+.btn-ask:disabled {
+  background: #A0A0A0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.error-message {
+  color: #d32f2f;
+  background: #ffebee;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .correct-toggle {
+    margin-top: 8px;
+  }
+}
